@@ -1,0 +1,237 @@
+﻿@model Scholas.Classes.smkProductView
+
+@{
+    ViewBag.Title = "Details";
+}
+@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .table.table-bordered thead > tr > th
+    {
+      
+     }
+</style>
+<div class="theme-panel hidden-xs hidden-sm">
+				<div class="toggler">
+				</div>
+				<div class="toggler-close">
+				</div>
+				<div class="theme-options">
+					
+					<div class="theme-option">
+						<span>
+						Layout </span>
+						<select class="layout-option form-control input-small">
+							<option value="fluid" selected="selected">Fluid</option>
+							<option value="boxed">Boxed</option>
+						</select>
+					</div>
+					
+					
+					<div class="theme-option">
+						<span>
+						Sidebar Position </span>
+						<select class="sidebar-pos-option form-control input-small">
+							<option value="left" selected="selected">Left</option>
+							<option value="right">Right</option>
+						</select>
+					</div>
+					<div class="theme-option">
+						<span>
+						Footer </span>
+						<select class="page-footer-option form-control input-small">
+							<option value="fixed">Fixed</option>
+							<option value="default" selected="selected">Default</option>
+						</select>
+					</div>
+				</div>
+</div>
+<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+					<h3 class="page-title">
+					SmkItmes Details 
+					</h3>
+					<ul class="page-breadcrumb breadcrumb" >
+						<li class="btn-group"  style = "display: none;">
+							<button type="button" class="btn blue dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="1000" data-close-others="true">
+							<span>Actions</span><i class="fa fa-angle-down"></i>
+							</button>
+							<ul class="dropdown-menu pull-right" role="menu">
+								<li>
+									<a href="#">Action</a>
+								</li>
+								<li>
+									<a href="#">Another action</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li class="divider">
+								</li>
+								<li>
+									<a href="#">Separated link</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<i class="fa fa-home"></i>
+							<a href="">SmkItmes</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						<li>
+							<a href="#">Details</a>
+							<i class="fa fa-angle-right"></i>
+						</li>
+						
+					</ul>
+					<!-- END PAGE TITLE & BREADCRUMB-->
+				</div>
+</div>
+<div class="row">
+				<div class="col-md-12">
+					<!-- BEGIN EXAMPLE TABLE PORTLET-->
+				        <div class="portlet box grey-cascade">
+						        <div class="portlet-title">
+							        <div class="caption">
+								        <i class="fa fa-globe"></i>SmkItmes Details
+							        </div>
+							        <div class="tools" style = "display : none;">
+								        <a href="javascript:;" class="collapse">
+								        </a>
+								        <a href="#portlet-config" data-toggle="modal" class="config">
+								        </a>
+								        <a href="javascript:;" class="reload">
+								        </a>
+								        <a href="javascript:;" class="remove">
+								        </a>
+							        </div>
+						        </div>
+						        <div class="portlet-body">
+							        <div class="table-toolbar">
+                                        
+                                        <fieldset>
+                                            
+                                          <table class="table table-hover  table-bordered"">
+                                            <thead>
+                                            <tr>
+	                                            <th colspan="2">&nbsp;</th>
+                                                <th colspan="3"><div class="text-center">Acabada(mm)</div></th>
+                                                <th colspan="3"><div class="text-center">Bruto(mm)</div></th>
+                                                <th colspan="3">&nbsp;</th>
+                                                <th colspan="4"><div class="text-center">Controles</div></th>
+                                            </tr>
+                                            <tr>
+	                                            <th width="400px">Sub Produto</th>
+                                                <th width="300px">Categoria</th>
+                                                <th>Compr.</th>
+                                                <th>Larg.</th>
+                                                <th>Espess.</th>
+                                                <th>Compr.</th>
+                                                <th>Larg.</th>
+                                                <th>Espess.</th>
+                                                <th>Qtde</th>
+                                                <th>Área(m)</th>
+                                                <th>Perda(%)</th>
+                                                <th width="80">Mat.Prima</th>
+                                                <th width="70">Alterar</th>
+                                                <th width="70">Excluir</th>
+                                            </tr>
+                                            </thead>
+                                          <tbody>
+                                              @foreach (var item in Model.smkSubProdus) {
+                                                  <tr class="linhas">
+
+                                                    <td>@Html.DisplayFor(model => item.sp_descricao)</td>
+                                                    <td>@Html.DisplayFor(model => item.csp_descricao)</td>
+                                                    <td>@Html.DisplayFor(model => item.comprimento_acabada)</td>
+                                                    <td>@Html.DisplayFor(model => item.largura_acabada)</td>
+                                                    <td>@Html.DisplayFor(model => item.espessura_acabada)</td>
+                                                    <td>@Html.DisplayFor(model => item.comprimento_bruto)</td>
+                                                    <td>@Html.DisplayFor(model => item.largura_bruto)</td>
+                                                    <td>@Html.DisplayFor(model => item.espessura_bruto)</td>
+                                                    <td>@Html.DisplayFor(model => item.quantidade)</td>
+                                                    <td>@Html.DisplayFor(model => item.area)</td>
+                                                    <td>@Html.DisplayFor(model => item.perda)</td>
+                                                    
+                                                  </tr>
+                                                  <tr class="linhaMateriaPrima">
+                                                    <th>&nbsp;</th>
+                                                    <th><div align="center">Excluir</div></th>
+			                                        <th colspan="9">Materia Prima</th>
+			                                        <th colspan="1">Unidade</th>
+                                                    <th colspan="1">Quantidade</th>
+                                                    <th>&nbsp;</th>
+                                                  </tr>
+                                                  
+                                                  foreach (var modelitme in item.smkAccessory) { 
+                                                    <tr class="linhaMateriaPrima">
+                                                        <td>&nbsp;</td>
+                        	                            <td>@Html.DisplayFor( modelItem => modelitme.sub_produtos_id)</td>
+                        	                            <td>@Html.DisplayFor(modelItem => modelitme.codigo_smk)</td>
+                                                        <td>@Html.DisplayFor(modelItem => modelitme.unidade)</td>
+                                                        <td>@Html.DisplayFor(modelItem => modelitme.quantitide)</td>
+                                                        <td>&nbsp;</td>
+                                                    </tr>
+                                                  
+                                                  }
+
+                                              }
+                                              <tr>
+			                                        <th colspan="4">Materia Prima</th>
+                                                    <th colspan="4">Categoria</th>
+			                                        <th>Unidade</th>
+			                                        <th>Quantidade</th>
+			                                        <th colspan="2"><div class="text-center">Alterar</div></th>
+			                                        <th colspan="2"><div class="text-center">Excluir</div></th>
+                                                </tr>
+                                              @foreach (var item in Model.smkAccessory1) 
+                                              { 
+                                                  <tr>
+                                                    <td>>@Html.DisplayFor(model => item.codigo_smk)</td>
+                                                    <td>@Html.DisplayFor(model => item.categoria)</td>
+                                                    <td>@Html.DisplayFor(model => item.unidade)</td>
+                                                    <td>@Html.DisplayFor(model => item.quantitide)</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    
+                                                  </tr>
+                                              
+                                              }
+                                                <tr>
+			                                        <th colspan="4">Materia Prima</th>
+                                                    <th colspan="4">Categoria</th>
+			                                        <th>Unidade</th>
+			                                        <th>Quantidade</th>
+			                                        <th colspan="2"><div class="text-center">Alterar</div></th>
+			                                        <th colspan="2"><div class="text-center">Excluir</div></th>
+                                                </tr>
+                                              @foreach (var item in Model.smkAccessory2) 
+                                              { 
+                                                  <tr>
+                                                    <td>>@Html.DisplayFor(model => item.codigo_smk)</td>
+                                                    <td>@Html.DisplayFor(model => item.categoria)</td>
+                                                    <td>@Html.DisplayFor(model => item.unidade)</td>
+                                                    <td>@Html.DisplayFor(model => item.quantitide)</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                    
+                                                  </tr>
+                                              
+                                              }
+                                          </tbody>
+                                          </table>
+                                    </fieldset>
+                                    <p class = "buttonParam">
+                                        <button id="sample_editable_1_new" class="btn green">
+                                           
+                                        </button>
+                                        <button id="sample_editable_1_new" class="btn green">
+                                           
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>

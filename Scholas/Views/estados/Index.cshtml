@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Scholas.Models.estados>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    @Html.ActionLink("Inserir novo", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            nome
+        </th>
+        <th>
+            sigla
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sigla)
+        </td>
+        <td>
+            @Html.ActionLink("Alterar", "Edit", new { id = item.id }) |
+            @Html.ActionLink("Visualizar", "Details", new { id = item.id }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.id })
+        </td>
+    </tr>
+}
+
+</table>

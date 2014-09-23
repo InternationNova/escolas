@@ -1,0 +1,16 @@
+ button#sample_editable_1_new a {
+        color: #ffffff !important;
+ }
+p.buttonParam {
+    margin-top: 10px;
+}
+i.icon-plus-sign {
+    width: 14px;
+    height: 14px;
+    background-image: url("../Content/img/glyphicons-halflings.png");
+    background-position: 0 -96px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}

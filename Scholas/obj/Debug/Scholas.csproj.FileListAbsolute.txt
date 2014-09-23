@@ -1,0 +1,7 @@
+E:\work\asp_work\Scholas\Scholas\Scholas\bin\Scholas.dll
+E:\work\asp_work\Scholas\Scholas\Scholas\bin\Scholas.pdb
+E:\work\asp_work\Scholas\Scholas\Scholas\bin\EntityFramework.dll
+E:\work\asp_work\Scholas\Scholas\Scholas\bin\itextsharp.dll
+E:\work\asp_work\Scholas\Scholas\Scholas\bin\EntityFramework.xml
+E:\work\asp_work\Scholas\Scholas\Scholas\obj\Debug\Scholas.dll
+E:\work\asp_work\Scholas\Scholas\Scholas\obj\Debug\Scholas.pdb

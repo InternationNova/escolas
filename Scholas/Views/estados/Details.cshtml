@@ -1,0 +1,27 @@
+﻿@model Scholas.Models.estados
+
+@{
+    ViewBag.Title = "Details";
+}
+@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend>estados</legend>
+
+    <div class="display-label">nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.nome)
+    </div>
+
+    <div class="display-label">sigla</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sigla)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

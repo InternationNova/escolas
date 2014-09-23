@@ -1,0 +1,53 @@
+﻿@model Scholas.Models.ope_itens
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<fieldset>
+    <legend>ope_itens</legend>
+
+    <div class="display-label">quantidade</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.quantidade)
+    </div>
+
+    <div class="display-label">previsao_embarque</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.previsao_embarque)
+    </div>
+
+    <div class="display-label">valor_unitario</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.valor_unitario)
+    </div>
+
+    <div class="display-label">valor_total</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.valor_total)
+    </div>
+
+    <div class="display-label">memo</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.memo)
+    </div>
+
+    <div class="display-label">smk_itens_id</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.smk_itens_id)
+    </div>
+
+    <div class="display-label">opes_id</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.opes_id)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

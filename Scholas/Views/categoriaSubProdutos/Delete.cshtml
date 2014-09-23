@@ -1,0 +1,26 @@
+﻿@model Scholas.Models.categoria_sub_produtos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+@{
+   
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>categoria_sub_produtos</legend>
+
+    <div class="display-label">descricao</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.descricao)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Voltar", "Index")
+    </p>
+}

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Scholas.Classes.reportProdutosPdf>
+       
+<table id="example" width="1024" border="0" class="table">
+            <thead>
+              <tr>
+                <th colspan="4"><h2>Relatório de produtos</h2></th>
+              </tr>
+              <tr>
+                <th>Escola</th>
+                <th>Produtos</th>
+                <th>Memo</th>
+                <th>Quantidade</th>
+                <th>SubTotal</th>
+              </tr>
+             </thead>
+            <tbody>
+                @foreach (var item in Model)
+                { 
+                    <tr>
+                    	<td>@item.escola</td>
+                        <td>@item.codigo_smk</td>
+                        <td><div align="center">@item.memo</div></td>
+                        <td><div align="center">@item.amount+";"+ @(item.totalProdutos+item.quantidade)</div></td>
+                        <td> @item.totalSubProdutos</td>
+                  	</tr>
+                  
+                }
+                    
+            </tbody>
+            <tfoot>
+            	<tr>
+                	<td colspan="5"><div align="right"><strong>Total de produtos:+ </strong></div></td>
+                </tr>
+            	<tr>
+                	<td colspan="5"><div align="right">Rel. gerado em: </div></td>
+                </tr>
+                </tfoot>
+        </table>
